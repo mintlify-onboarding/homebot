@@ -1,0 +1,54 @@
+{
+  "name": "Homebot",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#FC5AA6",
+    "light": "#FC71B2",
+    "dark": "#FC5AA6"
+  },
+  "api": {
+    "baseUrl": "https://homebot.ai/"
+  },
+  "topbarCtaButton": {
+    "name": "Book a Demo",
+    "url": "https://homebot.ai/demo"
+  },
+  "topbarLinks": [
+    {
+      "name": "Login",
+      "url": "http://admin.homebotapp.com/?__hstc=152307238.a61c0680045b0740e887f9dd910276ab.1692132095483.1692132095483.1692132095483.1&__hssc=152307238.1.1692132095483&__hsfp=2926660606"
+    }
+  ],
+  "tabs": [
+    {
+        "name": "API Reference",
+        "url": "api-reference"
+    }
+
+ ],
+  "navigation": [
+    {
+      "group": "Welcome",
+      "pages": ["getting-started"]
+    },
+    {
+        "group": "Homebot API",
+        "pages": [
+            {
+                "group": "Clients",
+                "pages": [
+                    "api-reference/clients/filter-clients"
+                ]
+            }
+        ]
+    }
+  ],
+  "footerSocials":
+    {
+        "linkedin": "https://www.linkedin.com/company/homebot/"
+    }
+}
