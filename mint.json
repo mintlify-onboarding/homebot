@@ -11,7 +11,7 @@
     "dark": "#FC5AA6"
   },
   "api": {
-    "baseUrl": "https://homebot.ai/"
+    "baseUrl": "https://homebot.ai"
   },
   "topbarCtaButton": {
     "name": "Book a Demo",
@@ -47,7 +47,25 @@
                     "api-reference/clients/update-a-client",
                     "api-reference/clients/create-a-client"
                 ]
-            }
+            },
+            {
+              "group": "Corporate Profiles",
+              "pages": [
+                "api-reference/corporate-profiles/create-a-profile",
+                "api-reference/corporate-profiles/retrieve-a-profile",
+                "api-reference/corporate-profiles/update-a-profile",
+                "api-reference/corporate-profiles/retrieve-a-profile",
+                "api-reference/corporate-profiles/filter-customer-profiles",
+                "api-reference/corporate-profiles/list-clients",
+                "api-reference/corporate-profiles/list-customer-profiles",
+                "api-reference/corporate-profiles/filter-customer-profiles",
+                "api-reference/corporate-profiles/list-webhook-clients",
+                "api-reference/corporate-profiles/create-a-webhook-client",
+                "api-reference/corporate-profiles/update-a-webhook-client",
+                "api-reference/corporate-profiles/delete-a-webhook-client",
+                "api-reference/corporate-profiles/update-a-webhook-client"
+              ]
+          }
         ]
     }
   ],
