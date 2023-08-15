@@ -41,7 +41,11 @@
             {
                 "group": "Clients",
                 "pages": [
-                    "api-reference/clients/filter-clients"
+                    "api-reference/clients/filter-clients",
+                    "api-reference/clients/retrieve-a-client",
+                    "api-reference/clients/delete-a-client",
+                    "api-reference/clients/update-a-client",
+                    "api-reference/clients/create-a-client"
                 ]
             }
         ]
