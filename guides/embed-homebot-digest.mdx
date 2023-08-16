@@ -1,0 +1,30 @@
+---
+title: "Embed a Homebot Digest"
+description: "You can add a script to embed the full Homebot experience for your clients on your portal or website. This feature needs to be enabled for you by the Homebot team."
+---
+
+## Requirements
+
+1. For security, the call to generate a client token must be done from the backend. Do NOT expose your customer token to your frontend.
+2. The client must be logged into a non-publicly accessible page. Homebot contains non-public information. Don't expose it to the world.
+3. The area you're displaying the widget should be at least 320px wide. Bigger's better! We recommend a more full size view. It will automatically expand vertically to be as tall as necessary to prevent a scrollbox.
+
+## Integration Steps
+
+1. Using a customer token, generate a client token.
+2. On a page that your client has logged in to, embed the widget html code passing the token generated in step 1 to the `data-token` attribute. Place the code where you want the widget to display.
+
+```Java
+<div data-homebot-root="true" data-contact-id="CONTACT_ID" data-token="YOUR_TOKEN"></div>
+```
+
+3. Place this script near the end of your page before the `</body>` tag
+
+```Java
+<script src="https://api.homebot.ai/v0.1.0/sdk.js" async></script>
+<script>
+Homebot.domReady(function() { // Optional domReady handler
+Homebot.init();
+});
+</script>
+```

@@ -1,0 +1,9 @@
+---
+title: "Digest URI Best Practices"
+description: "Our Retrieve a Client endpoint supports retrieving a URI that links a client to their Homebot digest directly. This URI includes the required authentication token needed for the user to access their digest. This token is valid for 6 months from when it was generated. It is a standard JWT and its expiration date can be found within the exp claim of the token using any JWT library."
+---
+
+We have several best practices when using this functionality:
+
+1. These links should only be generated on demand when a client is attempting to link out to Homebot. This is to prevent unneccessary calls to the Retrieve a Client endpoint. For example, when a client clicks on a "View my Homebot Report" button, you call the endpoint to retrieve the link and then pass it back to your application to redirect the user.
+2. Digest links should be cached for clients for up to 6 months. Because the URIs are longer lived, we highly recommend cacheing the link for the client after you have fetched it for the first time. You can check the expiration time of the token via the JWT `exp` claim.

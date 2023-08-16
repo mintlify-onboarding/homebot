@@ -36,6 +36,14 @@
       "pages": ["getting-started"]
     },
     {
+      "group": "Guides",
+      "pages": [
+        "guides/digest-url",
+        "guides/embed-homebot-digest",
+        "guides/embed-homebot-lead-gen-widget"
+      ]
+    },    
+    {
         "group": "Homebot API",
         "pages": [
             {
@@ -53,17 +61,12 @@
               "pages": [
                 "api-reference/corporate-profiles/create-a-profile",
                 "api-reference/corporate-profiles/retrieve-a-profile",
-                "api-reference/corporate-profiles/update-a-profile",
                 "api-reference/corporate-profiles/retrieve-a-profile",
-                "api-reference/corporate-profiles/filter-customer-profiles",
+                "api-reference/corporate-profiles/update-a-profile",                
                 "api-reference/corporate-profiles/list-clients",
                 "api-reference/corporate-profiles/list-customer-profiles",
                 "api-reference/corporate-profiles/filter-customer-profiles",
-                "api-reference/corporate-profiles/list-webhook-clients",
-                "api-reference/corporate-profiles/create-a-webhook-client",
-                "api-reference/corporate-profiles/update-a-webhook-client",
-                "api-reference/corporate-profiles/delete-a-webhook-client",
-                "api-reference/corporate-profiles/update-a-webhook-client"
+                "api-reference/corporate-profiles/list-webhook-clients"
               ]
           }
         ]
