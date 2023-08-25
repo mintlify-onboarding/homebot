@@ -67,7 +67,50 @@
                 "api-reference/corporate-profiles/filter-customer-profiles",
                 "api-reference/corporate-profiles/list-webhook-clients"
               ]
-          }
+            },
+            {
+              "group": "Customer Profiles",
+              "pages": [
+                "api-reference/customer-profiles/current-user-lookup"
+              ]
+            },
+            {
+              "group": "Homes",
+              "pages": [
+                "api-reference/homes/retrieves-a-clients-list-of-homes",
+                "api-reference/homes/creates-a-home-for-a-client",
+                "api-reference/homes/filters-homes",
+                "api-reference/homes/retrieve-a-home",
+                "api-reference/homes/deletes-home",
+                "api-reference/homes/updates-home",
+                "api-reference/homes/add-clients-to-a-home",
+                "api-reference/homes/remove-clients-from-a-home"
+              ]
+            },
+            {
+              "group": "Impersonation",
+              "pages": [
+                "api-reference/impersonation/impersonate-a-customer-profile"
+              ]
+            },
+            {
+              "group": "Insurance Agents",
+              "pages": [
+                "api-reference/insurance-agents/create-an-insurance-agent-profile",
+                "api-reference/insurance-agents/retrieve-an-insurance-agent-profile",
+                "api-reference/insurance-agents/update-an-insurance-agent-profile",
+                "api-reference/insurance-agents/retrieve-insurance-agents-office-profile"
+              ]
+            },
+            {
+              "group": "Loan Officers",
+              "pages": [
+                "api-reference/loan-officers/create-a-loan-officer-profile",
+                "api-reference/loan-officers/retrieve-a-loan-office-profile",
+                "api-reference/loan-officers/update-a-loan-officer-profile",
+                "api-reference/loan-officers/retrieve-a-loan-officers-office-profile"
+              ]
+            }  
         ]
     }
   ],
