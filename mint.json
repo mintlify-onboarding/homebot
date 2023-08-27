@@ -110,7 +110,18 @@
                 "api-reference/loan-officers/update-a-loan-officer-profile",
                 "api-reference/loan-officers/retrieve-a-loan-officers-office-profile"
               ]
-            }  
+            },
+            {
+              "group": "Loans",
+              "pages": [
+                "api-reference/loans/filters-all-home-loands-by-company",
+                "api-reference/loans/retrieves-loan",
+                "api-reference/loans/deletes-loan",
+                "api-reference/loans/updates-loan",
+                "api-reference/loans/retrieves-a-homes-list-of-loans",
+                "api-reference/loans/creates-a-loan-for-a-home"
+              ]
+            }    
         ]
     }
   ],
