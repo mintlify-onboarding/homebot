@@ -1,0 +1,91 @@
+---
+title: "ClientEvent"
+description: "ClientEvents are sent to WebhookClient owners as WebhookEvents."
+icon: "cube"
+---
+
+See the Understanding ClientEvents page for a full list of events, including additional details and examples of each.
+
+<ParamField path="id" type="string">
+  Unique identifier for the WebhookEvent object.
+</ParamField>
+<ParamField path="type" type="string">
+  Currently always 'webhook_event'.
+</ParamField>
+<ResponseField name="attributes" type="object">
+    A hash containing the details of the WebhookEvent.
+  <Expandable title="properties">
+    <ResponseField name="attempt" type="integer">
+      Number of attempts made to the WebhookClient. Max number of attempts is 25.
+    </ResponseField>
+
+    <ResponseField name="created_at" type="string">
+      The timestamp (UTC) when the WebhookEvent was created.
+    </ResponseField>
+
+    <ResponseField name="last_tried_at" type="string">
+      The timestamp (UTC) of the most recent attempt to deliver the WebhookEvent to the WebhookClient.
+    </ResponseField>
+
+    <ResponseField name="version" type="string">
+      The webhooks API version number
+    </ResponseField>
+
+    <ResponseField name="event_data" type="User Object">
+        A hash containing the event record.
+    <Expandable title="properties">
+        <ResponseField name="id" type="string">
+        Unique identifier for the event object.
+        </ResponseField>
+
+        <ResponseField name="action" type="string">
+        A short, human-readable name for the event.
+        </ResponseField>
+
+        <ResponseField name="client_id" type="object">
+        Unique identifier for the associated Client object.
+        </ResponseField>
+
+        <ResponseField name="properties" type="string">
+        A hash containing additional information about the event.
+        </ResponseField>
+
+        <ResponseField name="source" type="string">
+       A short, human-readable description of the source of the event within Homebot.
+        </ResponseField>
+
+        <ResponseField name="created_at" type="string">
+        The timestamp (UTC) when the event was created.
+        </ResponseField>
+
+    </Expandable>
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+
+<RequestExample>
+
+```cs Example
+{
+  "id": "string",
+  "type": "string",
+  "attributes": {
+    "attempt": 0,
+    "created_at": "string",
+    "last_tried_at": "string",
+    "version": "string",
+    "event_data": {
+      "id": "string",
+      "action": "string",
+      "client_id": "string",
+      "properties": {},
+      "source": "string",
+      "created_at": "string"
+    }
+  }
+}
+```
+
+</RequestExample>

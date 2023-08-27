@@ -121,7 +121,72 @@
                 "api-reference/loans/retrieves-a-homes-list-of-loans",
                 "api-reference/loans/creates-a-loan-for-a-home"
               ]
-            }    
+            },
+            {
+              "group": "Market Interests",
+              "pages": [
+                "api-reference/market-interests/retrieves-all-market-interests",
+                "api-reference/market-interests/creates-a-market-interest",
+                "api-reference/market-interests/retrieves-a-market-interest-for-a-client",
+                "api-reference/market-interests/deletes-a-market-interest-for-a-client"
+              ]
+            },
+            {
+              "group": "Office Profiles",
+              "pages": [
+                "api-reference/office-profiles/retrieves-an-office-profile",
+                "api-reference/office-profiles/update-an-office-profile",
+                "api-reference/office-profiles/retrieve-an-office-profiles-corporation"
+              ]
+            },
+            {
+              "group": "Real Estate Agents",
+              "pages": [
+                "api-reference/real-estate-agents/create-a-real-estate-agent-profile",
+                "api-reference/real-estate-agents/retrieve-a-real-estate-agent-profile",
+                "api-reference/real-estate-agents/update-a-real-estate-agent-profile",
+                "api-reference/real-estate-agents/retrieve-a-real-estate-agents-office"
+              ]
+            },
+            {
+              "group": "Subscriptions",
+              "pages": [
+                "api-reference/subscriptions/retrieve-a-subscription",
+                "api-reference/subscriptions/create-a-subscription",
+                "api-reference/subscriptions/add-customer-to-subscription"
+              ]
+            },
+            {
+              "group": "WebhookClients",
+              "pages": [
+                "api-reference/webhookclients/list-webhook-clients",
+                "api-reference/webhookclients/create-a-webhook-client",
+                "api-reference/webhookclients/retrieve-a-webhook-client",
+                "api-reference/webhookclients/deletes-a-webhook-client",
+                "api-reference/webhookclients/update-a-webhook-client"
+              ]
+            },
+            {
+              "group": "WebhookEvents",
+              "pages": [
+                "api-reference/webhookevents/list-webhook-events"
+              ]
+            },
+            {
+              "group": "Schemas",
+              "pages": [
+                "api-reference/schemas/error",
+                "api-reference/schemas/client-event"
+              ]
+            },
+            {
+              "group": "OAuth API",
+              "pages": [
+                "api-reference/oauth-api/overview",
+                "api-reference/oauth-api/forwards-user-to-oauth-flow",
+                "api-reference/oauth-api/get-access-token-from-authorization"
+              ]
+            }                                     
         ]
     }
   ],
