@@ -1,0 +1,156 @@
+---
+title: "Understanding ClientEvents"
+---
+
+ClientEvents are various events tracked by Homebot, and can be retrieved via the [GET /webhook-events endpoint](/api-reference/webhookevents/list-webhook-events). These events are triggered by certain actions originating from different sources.
+
+The following is a list of the various ClientEvent sources available to WebhookClient owners. You’ll also see descriptions of those ClientEvents, to help you understand their context and potential use cases for incorporating them in your workflows.
+
+Sources can be whitelisted via your WebhookClient in order to configure which events you will receive (see [WebhookClient documentation for more details on how to configure whitelisted sources](/api-reference/webhookclients/create-a-webhook-client)).
+
+<Note>
+    Some events may be listed under multiple sources below. For example, the `buyer_profile` event would have the `'buyer-digest'` source if the profile changes were performed by the Buyer, or the `'customer'` source if the profile changes were performed by the Customer.
+</Note>
+
+## Sources
+
+### `'buyer-digest'`
+
+Events created from an action performed by a client within the Buyer portal.
+
+- buyer_direct_message
+- buyer_profile
+- buyer_viewed_markets
+- buyer_viewed_report
+- client_registered_as_buyer
+- market_interest
+- viewed_video_email
+
+### `'customer'`
+
+Events created from an action performed by a LoanOfficer, RealEstateAgent, or InsuranceAgent customer.
+
+- [add_prequal](/understanding-client-events##add_prequal)
+- buyer_profile
+- cma_completed
+- market_interest
+
+### `'email'`
+
+Events created from email actions (e.g., email sent, opened, clicked, bounced, flagged as spam).
+
+- buyer_digest_email
+- buyer_welcome
+- hard_bounce
+- homeowner_digest_email
+- homeowner_lead_capture_error_email
+- homeowner_welcome
+- invitee_welcome
+- reject
+- spam
+- video_email
+
+### `'home-digest'`
+
+Events created from an action performed within the Home digest.
+
+- client_add_home
+- client_added_unpaid_loan_balance
+- client_tuned_value
+- cma_request
+- expanded_cash_position
+- expanded_home_appreciation
+- expanded_market_temp
+- homeowner_direct_message
+- instant_offer_requested
+- mortgage_coach_tca_requested
+- mortgage_coach_tca_updated
+- moved_cash_position_slider
+- referral_invite_sent
+- refi_slider_interaction
+- sms_subscribe
+- updated_insurance_policy_start_date
+- view
+- viewed_dream_home_panel
+- viewed_home_insurance_panel
+- viewed_market_panel
+- viewed_refi_details
+- viewed_reverse_mortgage_panel
+- viewed_should_you_sell
+- viewed_video_email
+
+### `'sms'`
+
+Events created from SMS actions (e.g. message sent, unsubscribed).
+
+- sms_sent
+- sms_subscribe
+- sms_unsubscribe
+
+### `'system'`
+
+Events created from Homebot's internal and/or automated processes.
+
+- added_client_lead
+- avm_down
+- avm_up
+- buyer_shifted_to_disengaged
+- buyer_shifted_to_monthly_digests
+- buyer_shifted_to_quarterly_digests
+- client_added
+- client_referral_sign_up
+- homeowner_shifted_to_disengaged
+- homeowner_shifted_to_monthly_digests
+- homeowner_shifted_to_quarterly_digests
+- loan_new
+
+### `'ylopo'`
+
+Events created from an action relating to Ylopo home listings search.
+
+- ylopo_listings_detail_view
+- ylopo_listings_favorite
+- ylopo_listings_high_activity
+- ylopo_listings_info_request
+- ylopo_listings_registration
+- ylopo_listings_save_search
+- ylopo_listings_search
+- ylopo_listings_showing_request
+- ylopo_listings_view
+
+## Event Details & Examples
+
+### add_prequal
+
+- **Description** : Customer completed a prequal for buyer & email delivered to notify client.
+- **Email tracking**: true
+- **Email actions tracked**: ["sent"]
+
+
+### `buyer_direct_message`
+
+- Description: Client sent a DM from the buyers app & DM email delivered to customer.
+- Email tracking: true
+- Email actions tracked: ["sent"]
+
+```bash
+{
+  "id": "b3b97563-c675-4de0-a1c1-7a11ae164a2f",
+  "type": "webhook_event",
+  "attributes": {
+    "attempt": 1,
+    "created_at": "2022-04-08T17:06:38.328Z",
+    "last_tried_at": "2022-04-08T17:06:38.304Z",
+    "version": "1.0.0",
+    "event_data": {
+      "id": "2747b919-ca24-48c4-9f31-16f48104202a",
+      "event_type": "ClientEvent",
+      "action": "sent",
+      "client_id": "0762d529-1eb0-4772-939a-2eb811db1191",
+      "properties": "Exploring Markets",
+      "source": "buyer-digest",
+      "created_at": "2022-04-08T17:06:38.302Z"
+    }
+  }
+}
+```

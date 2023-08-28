@@ -40,7 +40,8 @@
       "pages": [
         "guides/digest-url",
         "guides/embed-homebot-digest",
-        "guides/embed-homebot-lead-gen-widget"
+        "guides/embed-homebot-lead-gen-widget",
+        "guides/understanding-client-events"
       ]
     },    
     {
